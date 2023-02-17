@@ -1,0 +1,1 @@
+import{_ as t,o as e,c as s,a as o}from"./index-72ee0f95.js";import"@popperjs/core";const n={components:{}},c={class:"home"},a=o("h1",null,"首頁",-1),_=o("button",{class:"btn btn-warning"},"Hi",-1),r=[a,_];function i(d,p,l,m,h,f){return e(),s("div",c,r)}const b=t(n,[["render",i]]);export{b as default};
