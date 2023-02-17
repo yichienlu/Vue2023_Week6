@@ -1,0 +1,1 @@
+import{_ as e,o,c as t}from"./index-ef0be201.js";import"@popperjs/core";const s={};function c(r,n,a,p,_,i){return o(),t("h1",null,"This is About page.")}const l=e(s,[["render",c]]);export{l as default};
