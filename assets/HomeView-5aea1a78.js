@@ -1,0 +1,1 @@
+import{_ as t,o as e,c as s,a as o}from"./index-55c07cb5.js";const n={components:{}},c={class:"home"},a=o("h1",null,"首頁",-1),_=o("button",{class:"btn btn-warning"},"Hi",-1),r=[a,_];function i(d,p,l,h,m,f){return e(),s("div",c,r)}const $=t(n,[["render",i]]);export{$ as default};
