@@ -83,14 +83,13 @@
       <div class="mb-3">
         <label for="name" class="form-label">收件人姓名</label>
         <v-field id="name" name="姓名" type="text" class="form-control" :class="{ 'is-invalid': errors['姓名'] }"
-                  placeholder="請輸入姓名" rules="required"></v-field>
+                  placeholder="請輸入姓名" rules="required" ></v-field>
         <error-message name="姓名" class="invalid-feedback"></error-message>
       </div>
 
       <div class="mb-3">
         <label for="tel" class="form-label">收件人電話</label>
-        <v-field id="tel" name="電話" type="tel" class="form-control" :class="{ 'is-invalid': errors['電話'] }"
-                  placeholder="請輸入電話"  rules="required|min:8"></v-field>
+        <v-field id="tel" name="電話" type="tel" class="form-control" :class="{ 'is-invalid': errors['電話'] }" placeholder="請輸入電話" :rules="isPhone"></v-field>
         <error-message name="電話" class="invalid-feedback"></error-message>
       </div>
 
@@ -184,6 +183,10 @@ export default {
         .catch((err) => {
           console.log(err)
         })
+    },
+    isPhone (value) {
+      const phoneNumber = /^(09)[0-9]{8}$/
+      return phoneNumber.test(value) ? true : '需要正確的電話號碼'
     }
   },
   mounted () {

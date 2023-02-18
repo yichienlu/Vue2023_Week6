@@ -2,7 +2,8 @@
   <div>
     <h1>{{ product.title }}</h1>
     <img :src="product.imageUrl" height="200" alt="">
-    <button type="button" class="btn btn-primary">加入購物車</button>
+    <div class="fs-4" v-if="product.price==product.origin_price">{{ product.price }} 元</div>
+    <div class="fs-4" v-else><small class="fs-6"><del>{{ product.origin_price }}</del></small> {{ product.price }} 元</div>
   </div>
 </template>
 
@@ -21,7 +22,7 @@ export default {
       const { id } = this.$route.params
       this.$http.get(`${VITE_APP_URL}/api/${VITE_APP_PATH}/product/${id}`)
         .then((res) => {
-          // console.log(res.data)
+          console.log(res.data)
           this.product = res.data.product
         })
         .catch((err) => {
